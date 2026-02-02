@@ -1,18 +1,15 @@
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
-
-const nextConfig = {
-  output: 'export',
-
-  basePath: isProd ? '/employee_management_dashboard' : '',
-  assetPrefix: isProd ? '/employee_management_dashboard/' : '',
-
-  trailingSlash: true,
-
+const nextConfig: NextConfig = {
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.dicebear.com',
+        pathname: '/**',
+      },
+    ],
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

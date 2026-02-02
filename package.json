@@ -2,12 +2,12 @@
   "name": "employee-management",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sreenivas1305.github.io/employee_management_dashboard",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "deploy": "gh-pages -d out"
-  },
+
+ "scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start"
+},
   "dependencies": {
     "next": "16.1.1",
     "react": "19.2.3",
